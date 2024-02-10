@@ -56,7 +56,15 @@ footer{
     height: 100px;
     margin-top: 60px;
 }
+.pf{
+    display: flex;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: flex-start;
+}
 .popular-films, .popular-serials, .novinki{
+    overflow: auto;
+    min-height: 310px;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -70,7 +78,11 @@ footer{
     align-items: center;
 }
 .film, .serial, .new{
-    width: 20%;
+    flex: none;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 440px;
     height: auto;
     margin-bottom: 20px;   
 }
