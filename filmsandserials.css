@@ -1,0 +1,111 @@
+.slider {
+  position: relative;
+  overflow: hidden;
+  width: 800px;
+  height: 500px;
+  /* Adjust height as needed */
+}
+
+.slides {
+  display: flex;
+  flex-direction: row;
+  /* Display slides horizontally */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  /* Each slide occupies full width */
+  flex: 0 0 auto;
+  /* Reset flex-grow, flex-shrink, flex-basis */
+  overflow: hidden;
+  /* Hide overflow */
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.navigation {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navigation label {
+  cursor: pointer;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: #aaa;
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+input[type="radio"]:checked~.slides {
+  transform: translateX(-100%);
+}
+
+#slide1:checked~.slides {
+  transform: translateX(-000%);
+}
+
+#slide2:checked~.slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked~.slides {
+  transform: translateX(-200%);
+}
+
+#slide4:checked~.slides {
+  transform: translateX(-300%);
+}
+
+#slide1:checked~.navigation label:nth-child(1),
+#slide2:checked~.navigation label:nth-child(2),
+#slide3:checked~.navigation label:nth-child(3),
+#slide4:checked ~ .navigation label:nth-child(4) {
+background: #333;
+}
+.alert{
+width:100px ;
+height: 100px;
+background-color: antiquewhite;
+}
+table{
+  width: 50%;
+   display: flex;
+   align-self: center;
+   border-collapse: collapse;
+}
+.table{
+  display: flex;
+  justify-content: center
+}
+table td{
+  padding-bottom:8px ;
+  padding-top: 8px;
+  border-collapse: collapse;
+  font-size: 20px;
+}
+table td:first-child{
+  color: #44668d;
+  -webkit-text-stroke: #44668d 0.5px;
+}
+table tr+td{
+  color: red;
+}
+table td[colspan="2"]{
+  color: black;
+  -webkit-text-stroke: black 0px;
+}
+table tr:nth-of-type(odd){
+  background-color: #e7e3e3;
+}
